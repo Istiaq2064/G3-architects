@@ -1,64 +1,265 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-.work-sans-font{
+.work-sans-font {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight:400;
+    font-weight: 400;
     font-style: normal;
-  }
-  .text-gray{
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.text-gray {
     color: #424242;
-  }
-  .text-light-gray{
+}
+
+.text-light-gray {
     color: #727272;
-  }
-  .display-flex{
+}
+
+.display-flex {
     display: flex;
-  }
-  .bg-light{
-    background-color: rgba(255,144,14,0.1);
-  }
-  .btn-primary{
-    background-color:#ff900E ;
+}
+
+.bg-light {
+    background-color: rgba(255, 144, 14, 0.1);
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: #ff900E;
     color: white;
     padding: 20px 25px;
     font-size: 1.25rem;
     font-weight: 600;
     border-radius: 8px;
     border: none;
-  }
+}
+
+main>section {
+    margin-top: 130px;
+}
+
+.text-primary {
+    color: #ff900E;
+}
 
 
-  .navbar{
+.navbar {
     justify-content: space-between;
     align-items: center;
-  }
-  .brand{
+}
+
+.brand {
     font-weight: 700;
     font-size: 2.8rem;
-  }
-  .nav-items{
+}
+
+.nav-items {
     list-style: none;
     margin-right: 30px;
-  }
-  .nav-link{
+}
+
+.nav-link {
     text-decoration: none;
     font-weight: 500;
-  }
-  .navbar, .bannar{
+}
+
+.bannar {
     width: 1440px;
     margin: 0 auto;
-  }
+}
 
-  .bannar-contant{
+.bannar-contant {
     max-width: 850px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 50px;
-  }
+}
 
-  .bannar-title{
+.bannar-title {
     font-weight: 700;
     font-size: 4rem;
-  }
-  
+}
+
+.bannar-image {
+    width: 100%;
+}
+
+                /* Future will enjoy  */
+
+#future-section-title{
+    border-left: 5px solid #ff900E;
+    padding-left: 20px;
+}
+.features{
+    gap: 140px;
+}
+.future-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.future-card, .future-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+.future-architec{
+    width: 100%;
+}
+
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top:-100px;
+}
+
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.facts-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.facts-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top:10px;
+}
+.facts-card{
+    border: 1px solid #ff900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.facts-discription{
+   max-width: 540px; 
+}
+
+/* teams and feuture item related */
+.teams-image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+#quick-list {
+    font-weight: 500;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+
+.our-features {
+    margin-left: 130px;
+    max-width: 530px;
+}
+
+.teams {
+    align-items: center;
+}
+
+
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.sponsor-company img{
+    filter: grayscale(100%);
+}
+.fot{
+    margin:0 auto;
+}
+.footer{
+    margin-top: 80px;
+    padding: 5px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* responsive style side */
+
+@media screen and (max-width: 576px) {
+    .navbar,
+    .nav-link,
+    .teams,
+    .features{
+        flex-direction: column;
+    }
+
+    .teams-image-container, 
+    .facts-container,
+    .sponsor-company{
+        grid-template-columns: repeat(1fr);
+    }
+    .our-features{
+        margin: 20px;
+    }
+    .facts-container{
+        justify-content: center;
+        gap: 24px;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .sponsor-company{
+        justify-content: center;
+        gap: 50px;
+    }
+}
+
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams,
+    .features{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
+    .sponsor-company, .facts-container{
+        grid-template-columns:repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
